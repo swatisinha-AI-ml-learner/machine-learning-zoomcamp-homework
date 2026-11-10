@@ -51,7 +51,6 @@ Logistic regression	C = 0.1	0.768
 Decision tree	max_depth = 15, min_samples_leaf = 100	0.777
 Random forest	100 trees, max_depth = 15, min_samples_leaf = 10	0.799
 XGBoost (winner)	eta = 0.1, max_depth = 3, min_child_weight = 1, 200 rounds	0.804
-<!-- If you ran the bigger grid for the decision tree, write your new best numbers in the Decision tree row. -->
 
 Final score of the winner (XGBoost):
 
@@ -179,13 +178,13 @@ docker run -it --rm -p 9696:9696 bank-marketing
 Then open a second terminal and run python test_predict.py like before. Press Ctrl+C to stop the container.
 
 8. Cloud deployment
-<!-- Fill this part in after you deploy. Keep the URL or the screenshot, or both. -->
+https://machine-learning-zoomcamp-homework-kgxl.onrender.com/ping
 
-I deployed the service on Render as a Docker web service.
+PONG
 
-Service URL: <paste your URL here>
-Check that it is alive: open <your URL>/ping in a browser. It shows PONG.
-Test it: python test_predict.py https://<your-url>
+Service URL :(https://machine-learning-zoomcamp-homework-kgxl.onrender.com)
+Check that it is alive: open (https://machine-learning-zoomcamp-homework-kgxl.onrender.com/ping)in a browser. It shows PONG.
+Test it: python test_predict.py https://machine-learning-zoomcamp-homework-kgxl.onrender.com
 Screenshot of the test: screenshots/cloud-test.png
 
 How I deployed it:
@@ -194,6 +193,9 @@ I pushed this project to GitHub (with model.bin and the data).
 On https://render.com I made a new Web Service and connected my GitHub repository.
 I chose Docker as the language. Render builds my Dockerfile by itself.
 When the deploy finished, I tested the URL.
+Render URL : python test_predict.py https://machine-learning-zoomcamp-homework-kgxl.onrender.com
+And in the browser :
+https://machine-learning-zoomcamp-homework-kgxl.onrender.com/ping
 
 9. Limits of this project
 The data is from one bank in one time period. The model may not work well for other banks or other years.
